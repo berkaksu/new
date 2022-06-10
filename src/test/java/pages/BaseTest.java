@@ -1,7 +1,10 @@
+package pages;
+
 import org.apache.commons.lang3.StringUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.CapabilityType;
@@ -15,8 +18,9 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
-    public static String baseUrl = System.getProperty("baseUrl", "https://obss.com.tr/tr/");
 
+    public static String baseUrl = System.getProperty("baseUrl", "https://obss.com.tr/tr/");
+    WebDriver driver;
     @Before
     public void setUp() throws Exception {
 
